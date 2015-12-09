@@ -199,7 +199,7 @@ var $dragProvider = function() {
         self.cssDisplay = self.element.css('display');
         self.dimensions = $dndDOM.size(self.element);
         if (!self.hanging) {
-          self.cssPosition = self.element.css("position");
+          //self.cssPosition = self.element.css("position");
 
           if (self.options.keepSize) {
             self.keepSize = {
@@ -220,8 +220,8 @@ var $dragProvider = function() {
 
         angular.extend(self.offset, {
           click: {
-            top: event.pageY - self.offset.top,
-            left: event.pageX - self.offset.left
+            //top: event.pageY - self.offset.top,
+            //left: event.pageX - self.offset.left
           }
         });
 
@@ -231,9 +231,9 @@ var $dragProvider = function() {
         self.startEvent = event;
 
         self.element.css({
-          position: 'absolute',
-          left: self.offset.left + 'px',      //jqlite does not support raw Number
-          top: self.offset.top + 'px'
+          //position: 'absolute',
+          //left: self.offset.left + 'px',      //jqlite does not support raw Number
+          //top: self.offset.top + 'px'
         });
 
         $document.on("mousemove", self.drag);
